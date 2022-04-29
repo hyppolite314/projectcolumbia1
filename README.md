@@ -12,10 +12,12 @@ Welcome to my repository of FinTech projects. This specific project is an analyz
 ## Technologies
 
 Required programs, libraries, systems, and overall dependencies:
-
+<p>
 Python (version 3.0 or later)
-`Pathlib
-`csv
+<br>
+`Pathlib`
+<br>
+`csv`</p>
 
 ---
 
