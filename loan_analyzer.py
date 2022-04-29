@@ -25,11 +25,16 @@ print(f'The number of loans in this portfolio is {number_of_loans}')
 # @TODO: Use the `sum` function to calculate the total of all loans in the list.
 # Print the total value of the loans
 
-sum_of_loans = 0
-for loan in loan_costs:
-    sum_of_loans = sum_of_loans + loan
+#NOTE FOR ^^ : THIS CAN ALSO BE WRITTEN AS 
+sum_of_loans = sum(loan_costs[0:5])
+
 print(f'The TOTAL SUM of this loan portfolio is: {sum_of_loans}')
-#NOTE FOR ^^ : THIS CAN ALSO BE WRITTEN AS sum(loan_costs[0:5])
+
+#NOTE: Below is an alternative way to get the sum of the loans
+#sum_of_loans = 0
+#for loan in loan_costs:
+#    sum_of_loans = sum_of_loans + loan
+
 
 # What is the average loan amount from the list?
 # @TODO: Using the sum of all loans and the total number of loans, calculate the average loan price.
@@ -85,8 +90,9 @@ print(f'The REMAINING MONTHS to maturity is: {remaining_months}')
 #   You'll want to use the **monthly** version of the present value formula.
 #   HINT: Present Value = Future Value / (1 + Discount_Rate/12) ** remaining_months
 
-present_value = (future_val) / (1 + 0.2/12) ** remaining_months
-print(f'The FAIR VALUE for this loan is {present_value}')
+annual_discount_rate = 0.20
+present_value = (future_val) / (1 + annual_discount_rate/12) ** remaining_months
+print(f'The FAIR VALUE for this loan is {present_value:.3f}')
 
 
 # If Present Value represents what the loan is really worth, does it make sense to buy the loan at its cost?
@@ -135,7 +141,7 @@ def calc_present_val (future_value,remaining_months,annual_discount_rate):
 
 present_value = calc_present_val(1000, 12, 0.2)
 
-print(f"The present value of the loan is: {present_value}")
+print(f"The present value of the loan is: {present_value:.3f}")
 
 
 """Part 4: Conditionally filter lists of loans.
@@ -207,12 +213,13 @@ Output this list of inexpensive loans to a csv file
 header = ["loan_price", "remaining_months", "repayment_interval", "future_value"]
 
 # Set the output file path
-output_path = Path("inexpensive_loans.csv")
+
+output_path = Path("/Users/centauri/Desktop/hyppfiles/projectcolumbia1/inexpensive_loans.csv")
 
 # @TODO: Use the csv library and `csv.writer` to write the header row
 # and each row of `loan.values()` from the `inexpensive_loans` list.
 
-csvpath = Path("inexpensive_loans.csv")
+csvpath = Path("/Users/centauri/Desktop/hyppfiles/projectcolumbia1/inexpensive_loans.csv")
 with open(csvpath, 'w', newline='') as csvfile:
     csvwriter = csv.writer(csvfile)
     csvwriter.writerow(header)
