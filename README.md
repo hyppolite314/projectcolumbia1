@@ -1,9 +1,11 @@
 # *Loan Portfolio Analyzer*
 Welcome to my repository of FinTech projects. This specific project is an analyzer for loan portfolios. With this tool, investors can:
-
-*quickly sift through a portfolio of loans
-*extract key indicators of the portfolio
-*decide whether it fits their investment strategy
+<p>
+**quickly sift through a portfolio of loans**
+<br>
+**extract key indicators of the portfolio**
+<br>
+**decide whether it fits their investment strategy**</p>
 
 ---
 
@@ -53,10 +55,12 @@ with open(csvpath, 'w', newline='') as csvfile:
 ```
 
 ## Updates Since Last *Push*
-
-*Updated coding for finding sum of loans
-*Improved `csv coding to save csv file
-*Added coding to limit float outputs to 3 decimal places for a cleaner look
+<p>
+**Updated coding for finding sum of loans**
+<br>
+**Improved `csv coding to save csv file**
+<br>
+**Added coding to limit float outputs to 3 decimal places for a cleaner look**</p>
 
 ---
 
